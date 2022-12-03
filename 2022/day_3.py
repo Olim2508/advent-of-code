@@ -49,4 +49,3 @@ class Day3(BaseService):
 
 
 day_3 = Day3('/Users/olim/Downloads/input3.txt')
-print(day_3.part_2())
