@@ -21,14 +21,6 @@ class Day3(BaseService):
 
     def part_1(self):
         prepared_data = super().read_input_file(self.file_path)
-        test_data = [
-            "vJrwpWtwJgWrhcsFMMfFFhFp",
-            "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL",
-            "PmmdzqPrVvPwwTWBwg",
-            "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn",
-            "ttgJtRGJQctTZtZT",
-            "CrZsJsPPZsGzwwsLwLmpwMDw",
-        ]
         compartment_1, compartment_2, common = [], [], []
         for item in prepared_data:
             half_count = int(len(item) / 2)
@@ -40,14 +32,6 @@ class Day3(BaseService):
 
     def part_2(self):
         prepared_data = super().read_input_file(self.file_path)
-        test_data = [
-            "vJrwpWtwJgWrhcsFMMfFFhFp",
-            "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL",
-            "PmmdzqPrVvPwwTWBwg",
-            "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn",
-            "ttgJtRGJQctTZtZT",
-            "CrZsJsPPZsGzwwsLwLmpwMDw",
-        ]
         counter = 0
         temporary_list, common_badges = [], []
         for item in prepared_data:
