@@ -1,5 +1,3 @@
-
-
 # DAY 1  1.12.2022
 class CalorieCounting:
     def __init__(self, file_path):
@@ -31,10 +29,17 @@ class CalorieCounting:
         return group_by_elf_data_dict
 
     def _get_sorted_grouped_calories_dict(self, grouped_calories_dict):
-        return {k: v for k, v in sorted(grouped_calories_dict.items(), key=lambda item: sum(item[1]))}
+        return {
+            k: v
+            for k, v in sorted(
+                grouped_calories_dict.items(), key=lambda item: sum(item[1])
+            )
+        }
 
     def get_n_numbers_of_max_calories_sum(self, n=1):
-        sorted_dict = self._get_sorted_grouped_calories_dict(self.group_calorie_by_elf())
+        sorted_dict = self._get_sorted_grouped_calories_dict(
+            self.group_calorie_by_elf()
+        )
         n_keys = [list(sorted_dict)[-i] for i in range(1, n + 1)]
         sum_of_max_n = 0
         for key in n_keys:
@@ -42,5 +47,5 @@ class CalorieCounting:
         return sum_of_max_n
 
 
-calorie_count = CalorieCounting('/Users/olim/Downloads/input.txt')
+calorie_count = CalorieCounting("/Users/olim/Downloads/input.txt")
 print(calorie_count.get_n_numbers_of_max_calories_sum(3))

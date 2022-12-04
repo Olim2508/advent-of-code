@@ -21,8 +21,14 @@ class Day3(BaseService):
 
     def part_1(self):
         prepared_data = super().read_input_file(self.file_path)
-        test_data = ["vJrwpWtwJgWrhcsFMMfFFhFp", "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL", "PmmdzqPrVvPwwTWBwg",
-                     "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn", 'ttgJtRGJQctTZtZT', "CrZsJsPPZsGzwwsLwLmpwMDw"]
+        test_data = [
+            "vJrwpWtwJgWrhcsFMMfFFhFp",
+            "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL",
+            "PmmdzqPrVvPwwTWBwg",
+            "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn",
+            "ttgJtRGJQctTZtZT",
+            "CrZsJsPPZsGzwwsLwLmpwMDw",
+        ]
         compartment_1, compartment_2, common = [], [], []
         for item in prepared_data:
             half_count = int(len(item) / 2)
@@ -34,18 +40,30 @@ class Day3(BaseService):
 
     def part_2(self):
         prepared_data = super().read_input_file(self.file_path)
-        test_data = ["vJrwpWtwJgWrhcsFMMfFFhFp", "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL", "PmmdzqPrVvPwwTWBwg",
-                     "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn", 'ttgJtRGJQctTZtZT', "CrZsJsPPZsGzwwsLwLmpwMDw"]
+        test_data = [
+            "vJrwpWtwJgWrhcsFMMfFFhFp",
+            "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL",
+            "PmmdzqPrVvPwwTWBwg",
+            "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn",
+            "ttgJtRGJQctTZtZT",
+            "CrZsJsPPZsGzwwsLwLmpwMDw",
+        ]
         counter = 0
         temporary_list, common_badges = [], []
         for item in prepared_data:
             temporary_list.append(item)
             counter += 1
             if counter == 3:
-                common_badges.append(list(set(temporary_list[0]) & set(temporary_list[1]) & set(temporary_list[2])))
+                common_badges.append(
+                    list(
+                        set(temporary_list[0])
+                        & set(temporary_list[1])
+                        & set(temporary_list[2])
+                    )
+                )
                 temporary_list.clear()
                 counter = 0
         return self._calculate_badges(common_badges)
 
 
-day_3 = Day3('/Users/olim/Downloads/input3.txt')
+day_3 = Day3("/Users/olim/Downloads/input3.txt")

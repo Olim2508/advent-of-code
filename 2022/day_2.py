@@ -50,7 +50,11 @@ class RockPaperScissors(BaseService):
     def new_strategy_calculation(self):
         data = self.read_input_file(self.file_path)
         total_points = 0
-        test_data = [['A', 'Y'], ['B', 'X'], ['C', 'Z']]  # test data. total should be 12
+        test_data = [
+            ["A", "Y"],
+            ["B", "X"],
+            ["C", "Z"],
+        ]  # test data. total should be 12
         for item in data:
             if item[0] == "A" and item[1] == "Y":
                 total_points += self.points["X"]
@@ -82,6 +86,6 @@ class RockPaperScissors(BaseService):
         return total_points
 
 
-rock_paper_scissors = RockPaperScissors('/Users/olim/Downloads/input2.txt')
+rock_paper_scissors = RockPaperScissors("/Users/olim/Downloads/input2.txt")
 
 print(rock_paper_scissors.new_strategy_calculation())

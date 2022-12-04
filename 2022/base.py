@@ -1,5 +1,3 @@
-
-
 class BaseService:
     def __init__(self, file_path):
         self.file_path = file_path
@@ -13,4 +11,3 @@ class BaseService:
             data = f.readlines()
             res_data = list(map(self._prepare_data, data))
         return res_data
-

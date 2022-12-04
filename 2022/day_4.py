@@ -1,4 +1,3 @@
-import string
 
 from base import BaseService
 
@@ -12,7 +11,7 @@ class Day4(BaseService):
         item = item.split(",")
         item[0], item[1] = item[0].split("-"), item[1].split("-")
         return item
-    
+
     def solution(self, all=True):
         prepared_data = super().read_input_file(self.file_path)
         count = 0
@@ -26,10 +25,9 @@ class Day4(BaseService):
                 if any(elem in left_list for elem in right_list):
                     count += 1
         return count
-    
 
-if __name__ == '__main__':
-    day_4 = Day4('/Users/olim/Downloads/input4.txt')
+
+if __name__ == "__main__":
+    day_4 = Day4("/Users/olim/Downloads/input4.txt")
     # print("Part 1 --->", day_4.solution())
     print("Part 2 --->", day_4.solution(all=False))
-    
