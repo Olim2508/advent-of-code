@@ -1,4 +1,3 @@
-
 from base import BaseService
 
 
@@ -29,5 +28,5 @@ class Day4(BaseService):
 
 if __name__ == "__main__":
     day_4 = Day4("/Users/olim/Downloads/input4.txt")
-    # print("Part 1 --->", day_4.solution())
+    # print("Part 1 --K->", day_4.solution())
     print("Part 2 --->", day_4.solution(all=False))
