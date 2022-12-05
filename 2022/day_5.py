@@ -68,6 +68,6 @@ class Day5(BaseService):
 
 
 if __name__ == "__main__":
-    day_4 = Day5("/Users/olim/Downloads/input5.txt")
-    print("Part 1 --->", day_4.part_1())
-    print("Part 2 --->", day_4.part_2())
+    day_5 = Day5("/Users/olim/Downloads/input5.txt")
+    print("Part 1 --->", day_5.part_1())
+    print("Part 2 --->", day_5.part_2())
